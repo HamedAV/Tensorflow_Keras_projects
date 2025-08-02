@@ -1,2 +1,2 @@
 # Tensorflow_Keras_projects
-A collection of mini-projects from Tensorflow course
+A collection of projects from Tensorflow course
