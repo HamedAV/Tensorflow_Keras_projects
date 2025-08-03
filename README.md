@@ -8,3 +8,7 @@ A collection of projects from Tensorflow course
 ### Time_Series Dataset
 
 [[Climate Change Prediction]](./Time_Series/) 
+
+### Text_Classification
+
+[[Sarcasm Detection]](./Text_Classification/) 
