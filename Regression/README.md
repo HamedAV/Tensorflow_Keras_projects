@@ -1,32 +1,45 @@
-# 🏡 Boston Housing Price Prediction
+# 🎭 NLP Sarcasm Detection using MLP with Pre-trained Embeddings
+## 📋 Project Overview
+This project implements a sarcasm detection system using a Multi-Layer Perceptron (MLP) neural network combined with Google's pre-trained GNews-Swivel word embeddings. The model classifies news headlines as sarcastic or non-sarcastic, demonstrating the power of transfer learning in natural language processing tasks.
+## 🎯 Objectives
 
-This project uses a neural network to predict housing prices in Boston using the classic Boston Housing dataset. Built with TensorFlow/Keras.
+Binary Classification: Detect sarcasm in news headlines with high accuracy
+Transfer Learning: Leverage pre-trained word embeddings for better text representation
+Deep Learning: Implement MLP architecture for text classification
+Performance Analysis: Evaluate model performance with comprehensive metrics
 
-## 🔍 Dataset
+## 📊 Dataset
+Sarcasm Detection Dataset
 
-The Boston Housing dataset includes 506 samples and 13 features such as:
-- Average number of rooms per dwelling
-- Proportion of residential land zoned
-- Crime rate per capita
-- Distance to employment centers
+Source: Google Storage - Learning Datasets
+Format: JSON file with structured data
+Size: ~26,000 news headlines
+Features:
 
-Target: **Median value of owner-occupied homes (in $1000s)**
-
-## 🧠 Model
-
-- **Architecture**: neural network 
-- **Loss function**: Mean Squared Error (MSE)
-- **Optimizer**: rmsprop
-- **Framework**: TensorFlow / Keras
-
-## 📈 Results
-
-- Trained for 20 epochs
-- MSE converged to around 12.2124  (fill in)
+headline: The news headline text
+is_sarcastic: Binary label (1 = sarcastic, 0 = not sarcastic)
+article_link: Source URL of the article
 
 
-## 🚀 How to Run
 
-```bash
-pip install tensorflow
-python Boston_Housing.ipynb
+## Dataset Statistics:
+
+Total samples: ~26,000
+Sarcastic headlines: ~13,000 (50%)
+Non-sarcastic headlines: ~13,000 (50%)
+Average headline length: ~10-15 words
+
+## 🧠 Model Architecture
+Pre-trained Embeddings
+
+Model: Google GNews-Swivel
+Source: Kaggle Models Hub
+Dimensions: 20D vector representations
+Training Data: Google News corpus
+Vocabulary: Pre-trained on millions of news articles
+
+
+## Embedding Layer: TensorFlow Hub layer (non-trainable)
+Hidden Layers: Dense layers with ReLU activation
+Dropout: Regularization to prevent overfitting
+Output Layer: Single neuron with sigmoid activation for binary classification
